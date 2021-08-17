@@ -1,41 +1,8 @@
-# Configuring to your instructional style branding and university-specific data
+# Security-Assignments -- AY 20-21
 
-Set values for `instructorcollab_username` and `instructorcollab_domain` in `_config.yml`. E.g., I set:
+_This repository has been moved. It now lives at https://github.com/security-assignments/ay20-21_
 
-```
-instructorcollab_username: deargle
-instructorcollab_domain: colorado.edu
-```
-
-Then, you can use flow control to conditionally set variable values. E.g., if Dave said something wild and inappropriate that Tony does not want to say,
-Tony could set Dave's content to only render for Dave, referencing the `_config.yml` variables via `site.<variable>`:
-
-
-        {% if site.instructorcollab_username == 'deargle' %}
-        Something wild, inappropriate, and inflammatory!
-        {% endif %}
-
-
-At other times, a uni-specific email address domain can be referenced:
-
-        Students should use their `firstname.lastname@{{ site.instructorcollab_domain }}}` email address.
-
-
-To avoid unnecessarily repeating `if-then-else` statements, single-page-scope variables can be set at the top of a file:
-
-        {% if site.instructorcollab_domain == 'colorado.edu' %}
-            {% assign user_id_label = 'identikey' %}
-        {% elsif site.instructorcollab_domain == 'temple.edu' %}
-            {% assign user_id_label = 'TUid' %}
-        {% endif %}
-
-... and then later...
-
-        Echo out your {{ user_id_label }} for the deliverable.
-
-
-
-# Getting started for development
+## Getting started for development
 
 
 * If you fork, go go to your repo on github.com > settings > "Github Page" > set your site to be built from the master branch.
